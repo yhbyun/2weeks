@@ -1,0 +1,50 @@
+header {
+	height: 140px;
+	.container {
+		height: 140px;
+	}
+	.nav {
+		height: 37px;
+		border-radius: $border-radius-base;
+		background: white;
+		border: 1px solid $gray-lighter;
+		width: 72px;
+		float: right;
+		@include box-shadow(0px 1px 1px 0px $gray);
+		@include clearfix;
+		@include list-unstyled;
+		text-align: center;
+		li {
+			float: left;
+			&:first-child {
+				border-top-left-radius: $border-radius-base;
+				border-bottom-left-radius: $border-radius-base;
+				a {
+					padding-top: 6px;
+				}
+			}
+			&:last-child {
+				border-top-right-radius: $border-radius-base;
+				border-bottom-right-radius: $border-radius-base;	
+				a {
+					padding-top: 3px;
+				}
+			}
+			a {
+				display: block;
+				height: 35px;
+				width: 35px;
+				background: white;
+				border: 1px solid $gray-lighter;
+				font-size: 21px;
+				font-weight: 700;
+				color: $gray;
+				&:hover,
+				&.active {
+					background: $brand-primary;
+					color: white;
+				}
+			}
+		}
+	}	
+}

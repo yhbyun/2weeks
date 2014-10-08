@@ -1,0 +1,223 @@
+.panel {
+	position: relative;
+	.week-line {
+		position: absolute;
+		height: 420px;
+		width: 1px;
+		border-right: 1px dotted $gray-dark;
+		left: 528px;
+	}
+	&.panel-custom {
+		.panel-head {
+			min-height: 70px;
+			border-top-left-radius: $border-radius-base;
+			border-top-right-radius: $border-radius-base;
+			.panel-row {
+				@include clearfix;
+				.first-column,
+				.dates {
+					float: left;
+				}
+				.first-column {
+					.column {
+						width: 88px;
+						text-align: center;
+						height: 70px;
+						padding-top: 16px;
+						font-size: 28px;
+					}
+				}
+				.dates {
+					@include clearfix;
+					.column {
+						padding-top: 12px;
+						color: $gray;
+						width: 88px;
+						float: left;
+						text-align: center;
+						height: 70px;
+						span {
+							display: block;
+						}
+						span.day {
+							font-size: 18px;
+						}
+						span.date {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+		.panel-body {
+			min-height: 350px;
+			border-bottom-left-radius: $border-radius-base;
+			border-bottom-right-radius: $border-radius-base;
+			.panel-row {
+				@include clearfix;
+				border-bottom: 1px dotted $gray-dark;
+				min-height: 70px;
+				padding: 9px 0;
+				.first-column,
+				.timeline {
+					float: left;
+				}
+				.first-column {
+					.column {
+						text-align: center;
+						min-height: 70px;
+						width: 88px;
+						overflow: hidden;
+						padding: 0 9px;
+						@include display(flex);
+						@include flex-direction(column);
+						@include justify-content(center);
+						span {
+							display: block;
+							color: white;
+							word-wrap: break-word;
+							text-transform: uppercase;
+							@include flex-grow(0);
+						}
+					}
+				}
+				.timeline {
+					@include display(flex);
+					@include flex-direction(column);
+					@include justify-content(center);
+					min-height: 70px;
+					.timeline-row {
+						@include flex-grow(0);
+						@include clearfix;
+						margin-bottom: 9px;
+						&:first-child {
+							.column {
+								.line {
+									background: $brand-warning;
+									&:before,
+									&:after {
+										background: $brand-warning;
+									}
+								}
+								.goal {
+									border-color: $brand-warning;
+								}
+							}
+						}
+						&:nth-child(2) {
+							.column {
+								.line {
+									background: $brand-success;
+									&:before,
+									&:after {
+										background: $brand-success;
+									}
+								}
+								.goal {
+									border-color: $brand-success;
+								}
+							}
+						}
+						&:nth-child(3) {
+							.column {
+								.line {
+									background: $brand-info;
+									&:before,
+									&:after {
+										background: $brand-info;
+									}
+								}
+								.goal {
+									border-color: $brand-info;
+								}
+							}
+						}
+						&:nth-child(4) {
+							.column {
+								.line {
+									background: $gray;
+									&:before,
+									&:after {
+										background: $gray;
+									}
+								}
+								.goal {
+									border-color: $gray;
+								}
+							}
+						}
+						&:nth-child(5) {
+							.column {
+								.line {
+									background: $brand-warning;
+									&:before,
+									&:after {
+										background: $brand-warning;
+									}
+								}
+								.goal {
+									border-color: $brand-warning;
+								}
+							}
+						}
+						&:nth-child(6) {
+							.column {
+								.line {
+									background: $brand-success;
+									&:before,
+									&:after {
+										background: $brand-success;
+									}
+								}
+								.goal {
+									border-color: $brand-success;
+								}
+							}
+						}
+						.column {
+							float: left;
+							min-width: 21px;
+							font-size: 10px;
+							text-align: center;
+							color: $gray-lighter;
+							padding: 0 3px;
+							.assignment {
+								padding: 0 9px;
+								.activity {
+
+								}
+								.member {
+									color: $brand-danger;
+								}
+							}
+							.line {
+								height: 1px;
+								position: relative;
+								&:before,
+								&:after {
+									content: "";
+									position: absolute;
+									width: 1px;
+									height: 6px;
+									top: -3px;
+								}
+								&:before {
+									left: 0;
+								}
+								&:after {
+									right: 0;									
+								}
+							}
+							.goal {
+								padding: 5px 9px;
+								border-width: 1px;
+								border-style: solid;
+								max-width: 88px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
