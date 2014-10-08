@@ -48,6 +48,8 @@ day = now.getDay()
 thisMonthStartDay = new Date(1900+now.getYear(), now.getMonth(), 1).getDate()
 thisMonthEndDay = new Date(1900+now.getYear(), now.getMonth()+1, 0).getDate()
 
+
+
 console.log thisMonthStartDay
 console.log thisMonthEndDay
 
